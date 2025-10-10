@@ -34,6 +34,11 @@ body {
     color: var(--text-dark);
 
 }
+.wrapper {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 20px 40px;
+}
 
 a, a:visited {
     color: inherit;
@@ -83,7 +88,13 @@ li {
 .color-accent {
     color: var(--text-light);
 }
-
+.link-button {
+    width: 200px;
+    padding: 20px 65px;
+    border-radius: 100px;
+    background: var(--background-body);
+    cursor: pointer;
+}
 
 /* HEADER */
 
@@ -161,11 +172,92 @@ li {
     transition: 0.7s;
 }
 
-.header__menu {
+.navigation__menu {
     display: flex;
     gap: 8px;
 }
 .menu__subtitle-img {
     width: 20px;
     height: 20px;
+}
+
+/* section enjoy */
+
+.enjoy {
+    margin: 20px 0px 100px 0px;
+    position: relative;
+    width: 100%;
+    max-width: 1360px;
+    border-radius: 40px;
+    overflow: hidden;
+}
+
+.enjoy__hero-video {
+    position: absolute;
+    max-width: 1360px;
+    border-radius: 40px;
+    z-index: 1;
+}
+
+.enjoy__hero-img {
+    background: url(../assets/img/img-hero.jpg)lightgray 50% / cover no-repeat;
+    border-radius: 40px;
+    width: 100%;
+    padding: 100px;
+    z-index: 0;
+}
+
+.hero__conteiner {
+    width: 530px;
+    display: flex;
+    gap: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero__title {
+    font-size: 72px;
+    font-weight: 600;
+    line-height: 105%;
+    color: var(--text-light);
+    z-index: 2;
+}
+
+.hero__subtitle {
+    color: var(--text-light);
+    z-index: 2;
+}
+
+.hero__button {
+    display: flex;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+
+.hero__button-text {
+    transform: translateX(14px);
+    transition: 0.3s ease-in;
+    z-index: 2;
+}
+
+.hero__button:hover > .hero__button-text {
+    transform: translateX(0);
+    transition: 0.3s ease-in;
+}
+.hero__button-img {
+    width: 20px;
+    height: 20px;
+    opacity: 0;
+    transition: 0.7s;
+}
+
+.hero__button:hover > .hero__button-img {
+    opacity: 100%;
+}
+
+.hero__menu-tabs {
+    display: none;
 }
