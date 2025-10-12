@@ -71,9 +71,15 @@
         <section class="favorite" id="favorite__anchor" >
             <h2 class="favorite__title title">Choose your <span class="title-accent">favorite</span> coffee</h2>
             <div class="favorite__slider-conteiner">
-                <div class="favorite__slider-wrapper">
-                    <div class="favorite__slider-row">
-                        <div class="favorite__slide">
+                <div class="favorite__slider">
+                    <button type="button" class="slider__button">
+                        <svg class="slider__button-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M18.5 12H6M6 12L12 6M6 12L12 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="favorite__slider-wrapper">
+                        <div class="favorite__slider-row">
+                            <div class="favorite__slide">
                                 <img class="favorite__slide-img"
                                      src="./assets/img/coffee-slider-1.svg"
                                      alt="frappuccino">
@@ -84,7 +90,7 @@
                                     <p class="favorite__slide-price price">$5.50</p>
                                 </div>
                             </div>
-                        <div class="favorite__slide">
+                            <div class="favorite__slide">
                                 <img class="favorite__slide-img"
                                      src="./assets/img/coffee-slider-2.svg"
                                      alt="macchiato">
@@ -95,7 +101,7 @@
                                     <p class="favorite__slide-price price">$5.00</p>
                                 </div>
                             </div>
-                        <div class="favorite__slide">
+                            <div class="favorite__slide">
                                 <img class="favorite__slide-img"
                                      src="./assets/img/coffee-slider-3.svg"
                                      alt="frappuccino">
@@ -106,11 +112,13 @@
                                     <p class="favorite__slide-price price">$4.50</p>
                                 </div>
                             </div>
+                        </div>
                     </div>
-                </div>
-                <div class="favorite__arrows">
-                    <span class="arrow-prev"></span>
-                    <span class="arrow-next"></span>
+                    <button type="button" class="slider__button">
+                        <svg class="slider__button-arrow" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M6 12H18.5M18.5 12L12.5 6M18.5 12L12.5 18" stroke="#403F3D" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
                 </div>
                 <div class="favorite__controls">
                     <div class="favorite__controls-btn favorite__controls-btn--active"></div>
