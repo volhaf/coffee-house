@@ -181,6 +181,16 @@ li {
     height: 20px;
 }
 
+/*.burger__line-one.active {*/
+/*    transform: translateY(4px) rotate(45deg);*/
+/*    background-color: var(--border-dark);*/
+/*}*/
+
+/*.burger__line-two.active {*/
+/*    transform: translateY(-4px) rotate(-45deg);*/
+/*    background-color: var(--border-dark);*/
+/*}*/
+
 /* section enjoy */
 
 .enjoy {
