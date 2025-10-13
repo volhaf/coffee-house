@@ -1,0 +1,166 @@
+
+.header__menu-line {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--border-dark);
+}
+
+.section__menu {
+    margin: 20px 0px 100px 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: space-between;
+}
+
+.section__menu-text {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.section__menu-tabs {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    justify-content: center;
+
+}
+
+.menu__tabs-btn {
+    padding: 8px 16px 8px 8px;
+    border-radius: 100px;
+    background: transparent;
+    border: 1px solid var(--border-light);
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.7s;
+}
+
+.menu__tabs-btn--icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--border-light);
+}
+
+.menu__tabs-btn:first-child {
+    background: var(--background-container);
+    pointer-events: none;
+
+}
+
+.menu__tabs-btn:hover {
+    background: var(--background-container);
+    transition: 0.7s;
+}
+
+.menu__tabs-btn:hover > .menu__tabs-btn--text {
+    color: var(--text-light);
+    transition: 0.7s;
+}
+
+
+.menu__grid-item {
+    width: 310px;
+    /*height: 506px;*/
+    border-radius: 40px;
+    border: 1px solid var(--border-light);
+
+    display: flex;
+    flex-direction: column;
+}
+
+.section__menu-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.grid__item-images {
+    overflow: hidden;
+    max-width: 310px;
+    height: 308px;
+    border-radius: 40px;
+}
+
+.grid__item-images--max {
+    width: 100%;
+    height: 100%;
+    transform: scale(1.1);
+    transition: 0.7s ease-in-out;
+    cursor: pointer;
+
+}
+
+.grid__item-images--max:hover {
+    transform: scale(1);
+    transition: 0.7s ease-in-out;
+}
+
+.grid__img-1 {
+    background: url(../assets/img/coffee-1.jpg) lightgray 50% / cover no-repeat;
+
+}
+
+.grid__img-2 {
+    background: url(../assets/img/coffee-2.jpg) lightgray 50% / cover no-repeat;
+}
+.grid__img-3 {
+    background: url(../assets/img/coffee-3.jpg) lightgray 50% / cover no-repeat;
+}
+.grid__img-4 {
+    background: url(../assets/img/coffee-4.jpg) lightgray 50% / cover no-repeat;
+}
+.grid__img-5 {
+    background: url(../assets/img/coffee-5.jpg) lightgray 50% / cover no-repeat;
+}
+.grid__img-6 {
+    background: url(../assets/img/coffee-6.jpg) lightgray 50% / cover no-repeat;
+}
+.grid__img-7 {
+    background: url(../assets/img/coffee-7.jpg) lightgray 50% / cover no-repeat;
+}
+.grid__img-8 {
+    background: url(../assets/img/coffee-8.jpg) lightgray 50% / cover no-repeat;
+}
+
+.grid__item-content {
+    padding: 20px;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px;
+}
+
+.grid__item-price {
+    margin-top: auto;
+}
+
+.section__menu-loader {
+    display: none;
+}
+
+.menu__loader-arrow {
+    width: 24px;
+    height: 24px;
+}
+
+.menu__loader {
+    width: 60px;
+    height: 60px;
+    background: transparent;
+    border-radius: 100px;
+    border: 1px solid var(--border-dark);
+    cursor: pointer;
+    transition: all 0.7s;
+}
+
