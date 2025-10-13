@@ -378,7 +378,7 @@ li {
     gap: 40px;
 }
 
-.about__images-conteiner {
+.about__images-container {
     display: flex;
     gap: 40px;
     max-width: 1360px;
@@ -540,7 +540,7 @@ li {
     border-radius: 40px;
 }
 
-.footer-conteiner {
+.footer-container {
     padding: 100px;
     display: flex;
     flex-direction: row;
