@@ -3,15 +3,25 @@
 const prevBtn = document.querySelector('.slider__button-prev');
 const nextBtn = document.querySelector('.slider__button-next');
 const sliderRow= document.querySelector('.favorite__slider-row');
+const wrapper   = document.querySelector('.favorite__slider-wrapper');
 const slides = document.querySelectorAll('.favorite__slide');
+const controls = document.querySelectorAll('.favorite__controls-btn');
 
 
 const slidesArray = Array.from(slides); // сделали массив из 3 элементов
 let currentIndex = 0; //первый слайд
-let slideWidth = slidesArray[0].clientWidth;
+let slideWidth = slidesArray[0].clientWidth;≠
 
 const showSlide = (index) =>{
     sliderRow.style.transform = `translateX(-${index * slideWidth}px)`;
+
+    controls.forEach((btn, i) => {
+        if (i === index) {
+            btn.classList.add('favorite__controls-btn--active');
+        } else {
+            btn.classList.remove('favorite__controls-btn--active');
+        }
+    });
 } //двигаем
 
 showSlide(currentIndex); //начало
@@ -31,3 +41,10 @@ showSlide(currentIndex); //начало
         }
         showSlide(currentIndex);
     });
+
+
+
+window.addEventListener('resize', () => {
+    slideWidth = wrapper.clientWidth;
+    showSlide(currentIndex);
+});
