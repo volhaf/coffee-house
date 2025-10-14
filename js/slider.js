@@ -8,20 +8,13 @@ const slides = document.querySelectorAll('.favorite__slide');
 
 const slidesArray = Array.from(slides); // сделали массив из 3 элементов
 let currentIndex = 0; //первый слайд
+let slideWidth = slidesArray[0].clientWidth;
 
-
-function showSlide(index) {
-    slidesArray.forEach((slide, i) => {
-        if (i === index) {
-            slide.style.display = 'block'; // показываем текущий
-        } else {
-            slide.style.display = 'none';  // остальные скрываем
-        }
-    });
+const showSlide = (index) =>{
+    sliderRow.style.transform = `translateX(-${index * slideWidth}px)`
 }
 
-showSlide(currentIndex); // показываем слайд
-
+showSlide(currentIndex);
 
     prevBtn.addEventListener('click', () => {
         currentIndex--;
