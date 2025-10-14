@@ -349,6 +349,19 @@ li {
     text-align: center;
 }
 
+
+@keyframes fillBar {
+    0% {
+        background-color: var(--border-light);
+        transform: scaleX(0);
+        transform-origin: left;
+    }
+    100% {
+        background-color: var(--border-dark);
+        transform: scaleX(1);
+    }
+}
+
 .favorite__controls {
     display: flex;
     gap: 12px;
@@ -361,13 +374,18 @@ li {
     border-radius: 100px;
     background-color: var(--border-light);
     transition: background-color 0.4s ease;
-    cursor: pointer;
+    transform-origin: left;
+    transform: scaleX(1);
 }
 
 .favorite__controls-btn--active {
     background-color: var(--border-dark);
+    animation: fillBar 4s linear forwards;
 }
-
+.favorite__controls-btn--active::after {
+    transition: width 4s linear;
+    width: 100%;
+}
 /* section about */
 
 .about {
