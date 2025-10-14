@@ -11,10 +11,10 @@ let currentIndex = 0; //первый слайд
 let slideWidth = slidesArray[0].clientWidth;
 
 const showSlide = (index) =>{
-    sliderRow.style.transform = `translateX(-${index * slideWidth}px)`
-}
+    sliderRow.style.transform = `translateX(-${index * slideWidth}px)`;
+} //двигаем
 
-showSlide(currentIndex);
+showSlide(currentIndex); //начало
 
     prevBtn.addEventListener('click', () => {
         currentIndex--;
@@ -23,7 +23,6 @@ showSlide(currentIndex);
         }
         showSlide(currentIndex);
     });
-
 
     nextBtn.addEventListener('click', () => {
         currentIndex++;
