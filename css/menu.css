@@ -40,6 +40,16 @@
     transition: 0.7s;
 }
 
+.menu__tabs-btn.active {
+    background: var(--background-container);
+    border-color: var(--background-container);
+    transition: 0.3s ease;
+}
+.menu__tabs-btn.active,
+.menu__tabs-btn--text {
+    color: var(--text-dark);
+}
+
 .menu__tabs-btn--icon {
     width: 30px;
     height: 30px;
@@ -48,12 +58,6 @@
     align-items: center;
     justify-content: center;
     background: var(--border-light);
-}
-
-.menu__tabs-btn:first-child {
-    background: var(--background-container);
-    /*pointer-events: none;*/
-
 }
 
 .menu__tabs-btn:hover {

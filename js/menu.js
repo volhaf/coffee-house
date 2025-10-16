@@ -68,5 +68,6 @@ buttons.forEach( button => {
         button.classList.add("active");
     });
 });
+
 renderMenu('coffee');
 document.getElementById('coffee').classList.add('active');
