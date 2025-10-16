@@ -52,7 +52,7 @@
 
 .menu__tabs-btn:first-child {
     background: var(--background-container);
-    pointer-events: none;
+    /*pointer-events: none;*/
 
 }
 

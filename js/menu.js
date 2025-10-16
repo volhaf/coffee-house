@@ -12,20 +12,20 @@ const menu= {
         {title: "Coffee with cognac", text: "Fragrant black coffee with cognac and whipped cream", price: "$6.50", img: "../assets/img/coffee-8.jpg" }
     ],
     tea: [
-        {title: "Moroccan", text: "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint", price: "$4.50", img: "../assets/img/tea-1.jpg" },
-        {title: "Ginger", text: "Original black tea with fresh ginger, lemon and honey", price: "$5.00", img: "../assets/img/tea-2.jpg" },
-        {title: "Cranberry", text: "Invigorating black tea with cranberry and honey", price: "$5.00", img: "../assets/img/tea-3.jpg"},
-        {title: "Sea buckthorn", text: "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon", price: "$5.50", img: "../assets/img/tea-4.jpg"}
+        {title: "Moroccan", text: "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint", price: "$4.50", img: "../assets/img/tea-1.png" },
+        {title: "Ginger", text: "Original black tea with fresh ginger, lemon and honey", price: "$5.00", img: "../assets/img/tea-2.png" },
+        {title: "Cranberry", text: "Invigorating black tea with cranberry and honey", price: "$5.00", img: "../assets/img/tea-3.png"},
+        {title: "Sea buckthorn", text: "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon", price: "$5.50", img: "../assets/img/tea-4.png"}
     ],
     dessert: [
-        {title: "Marble cheesecake", text: "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam", price: "$3.50", img: "../assets/img/dessert-1.jpg" },
-        {title: "Red velvet", text: "Layer cake with cream cheese frosting", price: "$4.00", img: "../assets/img/dessert-2.jpg" },
-        {title: "Cheesecakes", text: "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar", price: "$3.50", img: "../assets/img/dessert-3.jpg" },
-        {title: "Creme brulee", text: "Delicate creamy dessert in a caramel basket with wild berries", price: "$4.00", img: "../assets/img/dessert-4.jpg" },
-        {title: "Pancakes", text: "Tender pancakes with strawberry jam and fresh strawberries", price: "$4.50", img: "../assets/img/dessert-5.jpg" },
-        {title: "Honey cake", text: "Classic honey cake with delicate custard", price: "$4.50", img: "../assets/img/dessert-6.jpg" },
-        {title: "Chocolate cake", text: "Cake with hot chocolate filling and nuts with dried apricots", price: "$5.50", img: "../assets/img/dessert-7.jpg" },
-        {title: "Black forest", text: "A combination of thin sponge cake with cherry jam and light chocolate mousse", price: "$6.50", img: "../assets/img/dessert-8.jpg" }
+        {title: "Marble cheesecake", text: "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam", price: "$3.50", img: "../assets/img/dessert-1.png" },
+        {title: "Red velvet", text: "Layer cake with cream cheese frosting", price: "$4.00", img: "../assets/img/dessert-2.png" },
+        {title: "Cheesecakes", text: "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar", price: "$3.50", img: "../assets/img/dessert-3.png" },
+        {title: "Creme brulee", text: "Delicate creamy dessert in a caramel basket with wild berries", price: "$4.00", img: "../assets/img/dessert-4.png" },
+        {title: "Pancakes", text: "Tender pancakes with strawberry jam and fresh strawberries", price: "$4.50", img: "../assets/img/dessert-5.png" },
+        {title: "Honey cake", text: "Classic honey cake with delicate custard", price: "$4.50", img: "../assets/img/dessert-6.png" },
+        {title: "Chocolate cake", text: "Cake with hot chocolate filling and nuts with dried apricots", price: "$5.50", img: "../assets/img/dessert-7.png" },
+        {title: "Black forest", text: "A combination of thin sponge cake with cherry jam and light chocolate mousse", price: "$6.50", img: "../assets/img/dessert-8.png" }
     ]
 };
 
@@ -45,7 +45,7 @@ function renderMenu(category) {
         // отрисовка карточки
         card.innerHTML = `
         <div class="grid__item-images">
-            <div class="grid__item-images--max grid__img-1">
+            <div class="grid__item-images--max">
                 <img src = "${item.img}" alt="${item.title}" class="grid__item-img">
             </div>
         </div>
@@ -54,9 +54,8 @@ function renderMenu(category) {
             <p class="grid__item-text text">${item.text}</p>
             <p class="grid__item-price price">${item.price}</p>
         </div>
-        `
+        `;
         productsMenu.appendChild(card); //вставили в контейне
-
     });
 }
 
@@ -70,3 +69,4 @@ buttons.forEach( button => {
     });
 });
 renderMenu('coffee');
+document.getElementById('coffee').classList.add('active');
