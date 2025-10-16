@@ -47,7 +47,7 @@ setInterval(() => {
     currentIndex++;
     if (currentIndex >= slides.length) currentIndex = 0;
     showSlide(currentIndex);
-}, 4000);
+}, 6000);
 
 window.addEventListener('resize', () => {
     slideWidth = wrapper.clientWidth;
