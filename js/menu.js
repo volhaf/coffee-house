@@ -2,7 +2,18 @@
 
 const menu= {
     coffee: [
-        {title: "Irish coffee", text: "Fragrant black coffee with Jameson Irish whiskey and whipped milk", price: "$7.00", img: "../assets/img/coffee-1.jpg" },
+        {
+            title: "Irish coffee",
+            text: "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
+            price: "$7.00",
+            img: "../assets/img/coffee-1.jpg",
+            size: {
+                s: {volume: "200ml", price: "$0.00"},
+                m: {volume: "300ml", price: "$0.50"},
+                l: {volume: "400ml", price: "$1.00"}
+            },
+
+            },
         {title: "Kahlua coffee", text: "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk", price: "$7.00", img: "../assets/img/coffee-2.jpg" },
         {title: "Honey raf", text: "Espresso with frothed milk, cream and aromatic honey", price: "$5.50", img: "../assets/img/coffee-3.jpg" },
         {title: "Ice cappuccino", text: "Cappuccino with soft thick foam in summer version with ice", price: "$5.50", img: "../assets/img/coffee-4.jpg" },
@@ -29,10 +40,16 @@ const menu= {
     ]
 };
 
+
+const order = {
+    size: [
+
+    ]
+}
 const buttons = document.querySelectorAll('.menu__tabs-btn');
 const productsMenu = document.querySelector('.section__menu-grid');
 
-
+// отображение меню
 function renderMenu(category) {
 
     productsMenu.innerHTML = ''; //очищаем блок перед отображением
@@ -59,6 +76,54 @@ function renderMenu(category) {
     });
 }
 
+
+// модальное окно
+function openModal(item) {
+    const modal = document.createElement('div');
+    modal.classList.add('section__menu-modal');
+    modal.innerHTML = `
+    <div class="modal__overlay"></div>
+        <div class="modal__container">
+        <div class="modal__image">
+            <img src="${item.img}" alt="${item.title}" class="modal__img">
+        </div>
+        <div class="modal__info">
+            <div class = "modal__info-title">
+                 <h2 class="info__title">${item.title}</h2>
+                 <p class="info__text">${item.text}</p>
+            </div>
+            <div class="modal__info-size">
+             <p class="info__size-title">Size</p>
+             <div class="info__size-btn">
+             <button class="size__btn">
+                 <span class = "size__btn-circle">S</span>
+                 <span class = "size__btn-text">200 ml</span>
+            </button>
+            <button class="size__btn">
+                 <span class = "size__btn-circle">M</span>
+                 <span class = "size__btn-text">300 ml</span>
+            </button>
+            <button class="size__btn">
+                 <span class = "size__btn-circle">S</span>
+                 <span class = "size__btn-text">200 ml</span>
+            </button>
+             
+              </div>
+            </div>
+                <h2 class="modal__title">${item.title}</h2>
+                <p class="modal__text">${item.text}</p>
+                <p class="modal__price">${item.price}</p>
+            </div>
+        </div>
+    
+    `
+
+}
+
+
+
+
+//кнопки переключатели
 buttons.forEach( button => {
     button.addEventListener('click', (e) => {
         const category = button.id; // id кнопок
